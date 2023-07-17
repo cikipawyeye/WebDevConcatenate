@@ -14,7 +14,7 @@ class Ongkir extends Model
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://api.rajaongkir.com/starter/city?key=3a4bac483388889394842127f547dd53",
+            CURLOPT_URL => "https://api.rajaongkir.com/starter/city",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -22,7 +22,7 @@ class Ongkir extends Model
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
-                "key: your-api-key"
+                "key: " . env('RAJAONGKIR_KEY')
             ),
         ));
 
@@ -49,7 +49,7 @@ class Ongkir extends Model
             CURLOPT_POSTFIELDS => "origin=501&destination=" . $destination . "&weight=" . $weight . "&courier=" . $courier,
             CURLOPT_HTTPHEADER => array(
                 "content-type: application/x-www-form-urlencoded",
-                "key: 3a4bac483388889394842127f547dd53"
+                "key: " . env('RAJAONGKIR_KEY')
             ),
         ));
 
