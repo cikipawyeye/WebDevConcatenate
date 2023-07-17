@@ -1,0 +1,16 @@
+{
+    "name": "zufarf/1-loop",
+    "description": "Program menggunakan perulangan dan jumlah perulangan diinput manual pada halaman view",
+    "authors": [
+        {
+            "name": "M. Zufar Fainan",
+            "email": "mzufarfainan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "require": {}
+}
